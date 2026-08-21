@@ -1,0 +1,187 @@
+[
+  {
+    "name": "Arlington",
+    "lon": -122.1184281,
+    "lat": 48.1934143
+  },
+  {
+    "name": "Brier\u00a0(near City Hall)",
+    "lon": -122.2721701,
+    "lat": 47.7925376
+  },
+  {
+    "name": "Darrington",
+    "lon": -121.604014,
+    "lat": 48.2546614
+  },
+  {
+    "name": "Everett\u00a0(on courthouse campus)",
+    "lon": -122.205786,
+    "lat": 47.9783846
+  },
+  {
+    "name": "Everett\u00a0(Everett Community College - behind WSU building)",
+    "lon": -122.1976821,
+    "lat": 48.0038695
+  },
+  {
+    "name": "Everett (in mall parking lot; behind the mall)",
+    "lon": -122.2113486,
+    "lat": 47.9101142
+  },
+  {
+    "name": "Everett (McCollum Park and Ride)",
+    "lon": -122.220672,
+    "lat": 47.8801715
+  },
+  {
+    "name": "Goldbar (Gateway Park)",
+    "lon": -121.6967794,
+    "lat": 47.855658
+  },
+  {
+    "name": "Index Drop Box",
+    "lon": -121.5537734,
+    "lat": 47.8204621
+  },
+  {
+    "name": "Lake Stevens\u00a0(near boat launch)",
+    "lon": -122.0648698,
+    "lat": 48.0131579
+  },
+  {
+    "name": "Lakewood\u00a0(parking lot east of middle school)",
+    "lon": -122.2089323,
+    "lat": 48.1488142
+  },
+  {
+    "name": "Lynnwood\u00a0(Ash Way Park and Ride)",
+    "lon": -122.2579223,
+    "lat": 47.852872
+  },
+  {
+    "name": "Lynnwood (in front of City Hall)",
+    "lon": -122.2937549,
+    "lat": 47.8253023
+  },
+  {
+    "name": "<![CDATA[Marysville\u00a0(Ash Ave Park & Ride)]]>",
+    "lon": -122.1840714,
+    "lat": 48.0549354
+  },
+  {
+    "name": "Marysville\u00a0(Grove Elementary)",
+    "lon": -122.1429862,
+    "lat": 48.0641836
+  },
+  {
+    "name": "Mill Creek\u00a0(in turnaround near post office)",
+    "lon": -122.2195108,
+    "lat": 47.8533545
+  },
+  {
+    "name": "Monroe (near library)",
+    "lon": -121.9832373,
+    "lat": 47.8488739
+  },
+  {
+    "name": "Mountlake Terrace\u00a0(near library)",
+    "lon": -122.3115527,
+    "lat": 47.7870741
+  },
+  {
+    "name": "Mukilteo\u00a0(near library)",
+    "lon": -122.2972524,
+    "lat": 47.9057916
+  },
+  {
+    "name": "Silvana\u00a0(near Peace Lutheran Church)",
+    "lon": -122.2556797,
+    "lat": 48.2026319
+  },
+  {
+    "name": "Snohomish\u00a0(Centennial Middle School)",
+    "lon": -122.0672549,
+    "lat": 47.9688245
+  },
+  {
+    "name": "Snohomish\u00a0(Glacier Peak High School parking lot)",
+    "lon": -122.1337846,
+    "lat": 47.8663121
+  },
+  {
+    "name": "Snohomish\u00a0(near library)",
+    "lon": -122.0884084,
+    "lat": 47.9152563
+  },
+  {
+    "name": "Stanwood\u00a0(near library)",
+    "lon": -122.3632095,
+    "lat": 48.2428489
+  },
+  {
+    "name": "Startup\u00a0(near Event Center)",
+    "lon": -121.7404889,
+    "lat": 47.8684009
+  },
+  {
+    "name": "Sultan (near City Hall/library)",
+    "lon": -121.8173198,
+    "lat": 47.8624171
+  },
+  {
+    "name": "Tulalip (near youth center)",
+    "lon": -122.2726928,
+    "lat": 48.0556045
+  },
+  {
+    "name": "Woodinville (Kokanee Elementary)",
+    "lon": -122.1585487,
+    "lat": 47.7821162
+  },
+  {
+    "name": "Woodway (near Town Hall)",
+    "lon": -122.3850961,
+    "lat": 47.7817607
+  },
+  {
+    "name": "Granite Falls (near library)",
+    "lon": -121.9596493,
+    "lat": 48.0826341
+  },
+  {
+    "name": "Edmonds (near library)",
+    "lon": -122.3729539,
+    "lat": 47.8100155
+  },
+  {
+    "name": "<![CDATA[Smokey Point\u00a0 (near Lowe's)]]>",
+    "lon": -122.1861992,
+    "lat": 48.1494456
+  },
+  {
+    "name": "<![CDATA[Marysville (near State Ave & 116th)]]>",
+    "lon": -122.1746214,
+    "lat": 48.0990366
+  },
+  {
+    "name": "Lynnwood (near Edmonds College)",
+    "lon": -122.3260299,
+    "lat": 47.8148004
+  },
+  {
+    "name": "Evergreen Branch Library - Everett Public Library",
+    "lon": -122.2379199,
+    "lat": 47.9121491
+  },
+  {
+    "name": "Bothell\u00a0(QFC Parking Lot)",
+    "lon": -122.2168174,
+    "lat": 47.7905784
+  },
+  {
+    "name": "Maltby Elementary School",
+    "lon": -122.1016717,
+    "lat": 47.8045861
+  }
+]

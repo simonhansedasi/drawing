@@ -1,0 +1,254 @@
+# Project Universe — graph data
+# Two node types: concepts (diamonds) and projects (circles).
+# Edit connects_to lists and concept_edges to reshape the graph.
+# Run seed_graph.py to check for new projects from MEMORY.md.
+
+concepts:
+  # --- Theory ---
+  - id: cipt_theory
+    label: "CIPT Theory"
+    group: theory
+
+  - id: causality
+    label: "Causality"
+    group: theory
+
+  - id: complex_systems
+    label: "Complex Systems"
+    group: theory
+
+  # --- Tech ---
+  - id: llm_ai
+    label: "LLM / AI"
+    group: tech
+
+  - id: pi_stack
+    label: "Pi Stack"
+    group: tech
+
+  - id: flask_web
+    label: "Flask / Web"
+    group: tech
+
+  # --- Research domains ---
+  - id: ml_prediction
+    label: "ML / Prediction"
+    group: research_domain
+
+  - id: geospatial
+    label: "Geospatial"
+    group: research_domain
+
+  - id: civic_data
+    label: "Civic / Public Data"
+    group: research_domain
+
+  # --- Creative ---
+  - id: narrative
+    label: "Narrative"
+    group: creative
+
+  - id: tabletop
+    label: "Tabletop RPG"
+    group: creative
+
+  - id: game_strategy
+    label: "Game / Strategy"
+    group: creative
+
+  - id: math_art
+    label: "Math Art"
+    group: creative
+
+  # --- Life ---
+  - id: dad_projects
+    label: "Dad Projects"
+    group: life
+
+  - id: job_search
+    label: "Job Search"
+    group: life
+
+
+projects:
+  # --- Research / Academic ---
+  - id: cipt_paper
+    label: "CIPT"
+    domain: research_academic
+    connects_to: [cipt_theory, causality, narrative, complex_systems]
+
+  - id: grape_expectations
+    label: "GrapeExpectations"
+    domain: research_academic
+    repo_key: GeoGastronomy
+    connects_to: [ml_prediction, geospatial]
+
+  - id: javascript_paper
+    label: "JavaScript"
+    domain: research_academic
+    repo_key: GeoGastronomy
+    connects_to: [ml_prediction, geospatial]
+
+  - id: kush_country
+    label: "KushCountry"
+    domain: research_academic
+    repo_key: GeoGastronomy
+    connects_to: [ml_prediction, geospatial]
+
+  - id: glacier_prethicktor
+    label: "GlacierPrethicktor"
+    domain: research_academic
+    connects_to: [ml_prediction, geospatial]
+
+  - id: glacier_prethicktor_2
+    label: "GlacierPrethicktor 2"
+    domain: research_academic
+    connects_to: [ml_prediction, geospatial]
+
+  - id: char_gen
+    label: "CharGen"
+    domain: research_academic
+    connects_to: [complex_systems, game_strategy, tabletop]
+
+  - id: strat_hacking
+    label: "StratHacking"
+    domain: research_academic
+    connects_to: [game_strategy, complex_systems, cipt_theory]
+
+  - id: snotrac
+    label: "Snotrac"
+    domain: civic
+    connects_to: [civic_data, geospatial]
+
+  # --- Creative Tech ---
+  - id: rippleforge
+    label: "RippleForge"
+    domain: creative_tech
+    connects_to: [causality, narrative, llm_ai, flask_web, tabletop]
+
+  - id: sf_majick
+    label: "sf_majick"
+    domain: creative_tech
+    connects_to: [cipt_theory, causality, complex_systems, llm_ai, game_strategy]
+
+  # --- Creative Writing / RPG ---
+  - id: story_time
+    label: "StoryTime"
+    domain: creative_writing
+    connects_to: [narrative]
+
+  - id: spelljammer
+    label: "Spelljammer"
+    domain: creative_writing
+    connects_to: [narrative, tabletop, flask_web]
+
+  - id: dotmm
+    label: "DotMM"
+    domain: creative_writing
+    connects_to: [narrative, tabletop, flask_web]
+
+  # --- Pi Infrastructure ---
+  - id: lab_kb
+    label: "lab_kb"
+    domain: pi_infra
+    connects_to: [pi_stack, flask_web, llm_ai]
+
+  - id: ai_glue
+    label: "ai_glue"
+    domain: pi_infra
+    connects_to: [pi_stack, llm_ai]
+
+  - id: window_tracker
+    label: "WindowTracker"
+    domain: pi_infra
+    connects_to: [pi_stack]
+
+  - id: game_ranking
+    label: "GameRanking"
+    domain: pi_infra
+    connects_to: [pi_stack, game_strategy]
+
+  - id: wiki_index
+    label: "WikiIndex"
+    domain: tools
+    repo_key: wiki-index
+    connects_to: [pi_stack]
+
+  # --- Tools / Web Apps ---
+  - id: rejection_matrix
+    label: "RejectionMatrix"
+    domain: tools
+    connects_to: [flask_web, pi_stack, job_search]
+
+  - id: portfolio
+    label: "Portfolio"
+    domain: tools
+    connects_to: [job_search]
+
+  - id: statistical_uniqueness
+    label: "StatUniqueness"
+    domain: tools
+    connects_to: [flask_web, math_art]
+
+  # --- Life / Personal ---
+  - id: library_recommender
+    label: "LibraryRecommender"
+    domain: life
+    connects_to: [dad_projects, pi_stack, flask_web, ml_prediction]
+
+  - id: scheduling
+    label: "Scheduling"
+    domain: life
+    connects_to: [dad_projects, pi_stack]
+
+  - id: pore_space
+    label: "PoreSpace"
+    domain: life
+    connects_to: [dad_projects]
+
+  # --- Art ---
+  - id: drawing
+    label: "Drawing"
+    domain: art
+    connects_to: [math_art]
+
+  # --- Hardware ---
+  - id: card_majick
+    label: "CardMajick"
+    domain: hardware
+    connects_to: []
+
+  # --- Civic ---
+  - id: edasi_motlev
+    label: "Edasi Motlev"
+    domain: civic
+    connects_to: [civic_data, flask_web]
+
+  # --- Shelved ---
+  - id: speed_zone_audit
+    label: "SpeedZoneAudit"
+    domain: shelved
+    connects_to: [civic_data, geospatial]
+
+  - id: personal_tracker
+    label: "PersonalTracker"
+    domain: shelved
+    connects_to: [pi_stack]
+
+  - id: terra_metabolica
+    label: "TerraMetabolica"
+    domain: shelved
+    repo_key: GeoGastronomy
+    connects_to: [geospatial, ml_prediction]
+
+
+# Concept ↔ concept edges
+concept_edges:
+  - [cipt_theory, causality]
+  - [cipt_theory, complex_systems]
+  - [causality, narrative]
+  - [narrative, tabletop]
+  - [complex_systems, game_strategy]
+
+  - [ml_prediction, geospatial]
+  - [civic_data, geospatial]
