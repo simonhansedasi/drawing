@@ -137,15 +137,7 @@ projects:
     domain: creative_writing
     connects_to: [narrative]
 
-  - id: spelljammer
-    label: "Spelljammer"
-    domain: creative_writing
-    connects_to: [narrative, tabletop, flask_web]
 
-  - id: dotmm
-    label: "DotMM"
-    domain: creative_writing
-    connects_to: [narrative, tabletop, flask_web]
 
   # --- Pi Infrastructure ---
   - id: lab_kb

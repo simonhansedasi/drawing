@@ -1,0 +1,22 @@
+Visualizing the unseen (until I get hired): data center construction has sharply increased in rural ZIP codes over the last few years.
+
+I track a public 4-source dataset of every announced or built US data center (2,302 facilities, cross-referenced across OpenStreetMap, PeeringDB, the IM3 Atlas, and Compute Atlas). Pulling the dated history behind those records: in 2024, 53% of new proposals landed in ZIP codes classified rural. In 2025, that jumped to 63%. So far in 2026, it's 69%. What's actually built today is only 29% rural -- the pipeline has moved hard toward places that don't look like where data centers have historically gone.
+
+Natural next assumption: rural land is cheaper and more available, so this is a trade-off -- developers giving up grid access to get it. I checked that against Merascope's own siting model instead of assuming it. Nationally, that trade-off is real: rank every ZIP code by how much it resembles an existing data-center site, and the least-suitable tier sits far from the power grid and close to clean land, while the most-suitable tier sits close to the grid and close to Superfund/RCRA-listed contamination -- a real correlation across 33,000+ ZIPs.
+
+Splitting the pipeline by rural and urban instead of averaging them together shows this isn't one story, it's two, moving in different directions. Rural proposals sit at a stable mean suitability tier of 7.3 out of 10 -- not tier 1's pristine countryside, but a specific, consistent profile with moderate grid access and moderate industrial-hazard proximity -- and that hasn't moved since 2021 (p=0.55). The rural surge above is pure volume, roughly 5x since pre-2024, not a change in what kind of rural land gets picked.
+
+Urban proposals are the ones actually drifting. They start from a much higher tier (9.3) and creep higher still, toward 9.5 by 2026 -- the closest thing to a real trend anywhere in this analysis (p=0.064, short of conventional significance, but the strongest signal by far). My first pass pooled rural and urban together into one "mean tier ~8, flat" number, and called the whole pipeline unchanged. That number was real, but it hid the actual story -- it looked flat only because rural's rising volume share and urban's rising tier happened to roughly cancel out in the average.
+
+%%%%%
+NOTES
+%%%%%
+
+Data: Merascope's own public risk model and 22-indicator siting pipeline (merascope.com/#/risk). Proposal-timing data from Compute Atlas's raw dated status-history records (CC BY 4.0), spatially joined to real ZCTA polygons rather than the source's own postal-code field (populated for only 13 ZIPs nationally). Tier and grid-access scores recomputed from the same out-of-fold model as the live product, cross-checked for a broad (not few-cluster-driven) pattern across all 48 states.
+
+Images: dc_rural_urban_volume.png (rural vs. urban proposal counts by period -- both grow, rural about 5x faster) + dc_tier_composition_profile.png (what tier 7.3 vs. tier 9.3 actually means on the ground -- grid access and contamination proximity, marked for both groups) + dc_rural_urban_tier_trajectory.png (rural holding flat, urban drifting toward the top tier, and the pooled average that hides both).
+
+### AI usage:
+Built with Claude Code, Simon-Hans Edasi directing. Three real catches across this piece's build. First: a draft asserted the newly-rural pipeline was "trading grid access for clean land," inferred by stitching two separately-true findings together without checking whether the specific accelerating pipeline behaves that way -- it doesn't, caught by a direct Spearman test before that claim shipped. Second: the original date extraction only kept records whose CURRENT status was forward-looking, silently dropping any proposal since built or cancelled -- Simon asked directly whether more data was available, and fixing that (using each record's full status history) recovered 14% more real records. Third, prompted by Simon pushing back on the "flat pipeline" framing and asking how urban and rural breakdowns were each changing on their own: splitting the pooled mean tier by rural/urban revealed it was hiding two different real movements that happened to roughly cancel out -- a genuine Simpson's-paradox case, not visible until Simon specifically asked for the breakdown rather than the average.
+
+Notebooks: civil/dc_rural_urban_volume.ipynb (primary), civil/dc_tier_composition.ipynb, civil/dc_rural_tier_link.ipynb, civil/dc_proposal_rural_shift.ipynb
